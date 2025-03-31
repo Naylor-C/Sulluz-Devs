@@ -1,27 +1,85 @@
-   body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        header {
-            background-color: #5C6AC4;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            padding: 20px;
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .image-container img {
-            margin: 10px;
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+/* stylesheet.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header.main {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+header.main h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header.main p {
+    margin: 0.5rem 0 2rem;
+    font-size: 1.2rem;
+}
+
+header.main img.B {
+    max-width: 100px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+/* Estilização da div .icon com as duas imagens */
+.icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre as imagens */
+    margin: 1.5rem 0;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.content h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilização do container de imagens principal */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
